@@ -1,0 +1,6 @@
+for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='D') { if (l===onIceLineup[k].indexOf('D'))
+                    {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                    else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                    else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
+                      lineUpG=lineUp}}
+                    lineUpG=lineUp
