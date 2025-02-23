@@ -1,8 +1,13 @@
-      // function displayGameData(event) { 
-        // idx = event.currentTarget; idxString = event.currentTarget.textContent;
-        // idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
-        // console.log(idxNumber); gameNumber = idxNumber[1];
-        const gameId = '2024020693' // data2.gameWeek[0].games[gameNumber].id;
+const gameData = document.getElementById('gameData');
+// const tipsContainer = document.getElementById('tip-container');
+onIceArray = []; onIceArray2 = []; goalsNumber = [];
+
+const frequency = (arr, item) => {let count = 0;
+    for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
+    return count;
+  };
+
+const gameId = '2024020693' // data2.gameWeek[0].games[gameNumber].id;
         console.log(gameId);
         var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         fetch(requestURL, {
@@ -99,4 +104,3 @@
                       document.getElementById('gameInfo').appendChild(newGoal2) }
             }); // end third second .then
           });
-      // } // end displayGamedata
