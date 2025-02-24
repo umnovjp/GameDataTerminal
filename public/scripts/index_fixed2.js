@@ -200,6 +200,6 @@ const gameId = '2024020693' // data2.gameWeek[0].games[gameNumber].id;
                       document.getElementById('gameInfo').appendChild(newGoal2) }
             }); // end third second .then
           });
-
+          console.log('abc')
 
 tipForm.addEventListener('submit', handleFormSubmit);

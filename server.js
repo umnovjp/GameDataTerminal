@@ -5,6 +5,7 @@ const util = require('util');
 
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
+const { title } = require('process');
 
 const PORT = 3001;
 
@@ -18,8 +19,10 @@ app.use(express.static('public'));
 
 // GET Route for homepage
 app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
+  res.sendFile(path.join(__dirname, '/public/index.html')),
+  
 );
+console.log(title)
 
 // GET Route for feedback page
 app.get('/feedback', (req, res) =>
@@ -62,6 +65,8 @@ const readAndAppend = (content, file) => {
 app.get('/api/tips', (req, res) => {
   console.info(`${req.method} request received for review`);
   readFromFile('./db/tips2024.json').then((data) => res.json(JSON.parse(data)));
+  console.info(`${req}`, `${res}`)
+  
 });
 
 // POST Route for a new UX/UI tip
@@ -128,4 +133,6 @@ app.post('/api/feedback', (req, res) => {
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
+  
 );
+console.log(title)
