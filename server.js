@@ -65,7 +65,7 @@ const readAndAppend = (content, file) => {
 app.get('/api/tips', (req, res) => {
   console.info(`${req.method} request received for review`);
   readFromFile('./db/tips2024.json').then((data) => res.json(JSON.parse(data)));
-  console.info(`${req}`, `${res}`)
+  // console.info(res)
   
 });
 

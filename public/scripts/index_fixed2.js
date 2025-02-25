@@ -103,7 +103,7 @@ const handleFormSubmit = (e) => {
   postTip(newTip);
 };
 
-const gameId = '2024020693' // data2.gameWeek[0].games[gameNumber].id;
+const gameId = '2024020913' // data2.gameWeek[0].games[gameNumber].id; 2024020913 2024020897
         console.log(gameId);
         var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         fetch(requestURL, {
